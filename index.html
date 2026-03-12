@@ -23,14 +23,15 @@
             <span class="eyebrow-copy">Live deployment, dynamic MITM injection, and daily-use real web tasks</span>
           </div>
 
-          <div class="columns is-variable is-8 is-vcentered">
-            <div class="column is-7-desktop">
+          <div class="hero-center">
+            <div class="hero-title-stack">
               <img src="static/images/clawtrap_logo.jpg" alt="ClawTrap logo" class="project-logo">
               <p class="hero-kicker">The First Dynamic Arena for Real-world OpenClaw Instances</p>
 
               <h1 class="title publication-title">
                 <span class="publication-name">ClawTrap</span>
-                <span class="publication-subtitle">A Real-World Adversarial Benchmark for Autonomous Agents</span>
+                <span class="publication-subtitle">A Real-World Adversarial Benchmark</span>
+                <span class="publication-subtitle publication-subtitle-break">for Autonomous Agents</span>
               </h1>
 
               <p class="hero-summary">
@@ -60,33 +61,31 @@
                 </span>
               </div>
             </div>
-
-            <div class="column is-5-desktop">
-              <aside class="hero-card">
-                <p class="card-label">Research Frame</p>
-                <h2 class="hero-card-title">Benchmarking agents where failure is consequential.</h2>
-
-                <ul class="hero-facts">
-                  <li>
-                    <span>Deployment</span>
-                    <strong>Real cloud OpenClaw instances, not a closed simulator</strong>
-                  </li>
-                  <li>
-                    <span>Attack Path</span>
-                    <strong>Dynamic MITM interception, monitoring, and online injection</strong>
-                  </li>
-                  <li>
-                    <span>Current Tasks</span>
-                    <strong>Summarize news, organize emails, and routine browsing flows</strong>
-                  </li>
-                </ul>
-
-                <p class="hero-card-note">
-                  ClawTrap focuses on realistic daily workflows and measures how a deployed agent changes behavior when its actual online traffic path is manipulated in real time.
-                </p>
-              </aside>
-            </div>
           </div>
+
+          <aside class="hero-card hero-card-centered">
+            <p class="card-label">Research Frame</p>
+            <h2 class="hero-card-title">Benchmarking agents where the traffic itself can become adversarial.</h2>
+
+            <ul class="hero-facts">
+              <li>
+                <span>Deployment</span>
+                <strong>Real cloud OpenClaw instances, not a closed simulator</strong>
+              </li>
+              <li>
+                <span>Attack Path</span>
+                <strong>Dynamic MITM interception, monitoring, and online injection</strong>
+              </li>
+              <li>
+                <span>Current Tasks</span>
+                <strong>Summarize news, organize emails, and routine browsing flows</strong>
+              </li>
+            </ul>
+
+            <p class="hero-card-note">
+              ClawTrap focuses on realistic daily workflows and measures how a deployed agent changes behavior when its actual online traffic path is manipulated in real time.
+            </p>
+          </aside>
         </div>
       </div>
     </section>
@@ -153,21 +152,27 @@
           <h2 class="title is-3">Agent <span class="flow-inline"><i class="fas fa-right-left"></i></span> MITM Proxy <span class="flow-inline"><i class="fas fa-right-left"></i></span> Real Web</h2>
         </div>
 
-        <div class="flow-diagram">
-          <div class="flow-node">
-            <strong>Agent</strong>
-            <span>Live cloud OpenClaw instance</span>
+        <div class="flow-diagram-shell">
+          <div class="flow-diagram">
+            <div class="flow-node">
+              <span class="flow-node-label">Step 01</span>
+              <strong>Agent</strong>
+              <span>Live cloud OpenClaw instance</span>
+            </div>
+            <div class="flow-arrow"><i class="fas fa-right-left"></i></div>
+            <div class="flow-node flow-node-accent">
+              <span class="flow-node-label">Step 02</span>
+              <strong>MITM Proxy</strong>
+              <span>Traffic interception, monitoring, and dynamic injection</span>
+            </div>
+            <div class="flow-arrow"><i class="fas fa-right-left"></i></div>
+            <div class="flow-node">
+              <span class="flow-node-label">Step 03</span>
+              <strong>Real Web</strong>
+              <span>Actual services, pages, and online content</span>
+            </div>
           </div>
-          <div class="flow-arrow"><i class="fas fa-right-left"></i></div>
-          <div class="flow-node flow-node-accent">
-            <strong>MITM Proxy</strong>
-            <span>Traffic interception, monitoring, and dynamic injection</span>
-          </div>
-          <div class="flow-arrow"><i class="fas fa-right-left"></i></div>
-          <div class="flow-node">
-            <strong>Real Web</strong>
-            <span>Actual services, pages, and online content</span>
-          </div>
+          <p class="flow-note">ClawTrap monitors genuine network traffic on the deployed path rather than replaying offline scripts in a closed environment.</p>
         </div>
 
         <div class="columns is-variable is-7 is-vcentered">

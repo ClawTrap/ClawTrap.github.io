@@ -135,9 +135,20 @@ a {
 .hero-topline {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-center {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.hero-title-stack {
+  text-align: center;
 }
 
 .eyebrow-pill {
@@ -163,7 +174,7 @@ a {
 .project-logo {
   width: 86px;
   height: 86px;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   border-radius: 24px;
   object-fit: cover;
   box-shadow: 0 18px 36px rgba(20, 32, 51, 0.15);
@@ -182,6 +193,7 @@ a {
   margin-bottom: 1.4rem !important;
   color: var(--ink-strong) !important;
   line-height: 0.95 !important;
+  text-align: center;
 }
 
 .publication-name,
@@ -205,24 +217,32 @@ a {
 .publication-subtitle {
   display: block;
   margin-top: 0.65rem;
-  max-width: 12ch;
+  max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   font-weight: 600;
   line-height: 1.04;
 }
 
+.publication-subtitle-break {
+  margin-top: 0.18rem;
+}
+
 .hero-summary {
   max-width: 48rem;
-  margin-bottom: 1.6rem;
+  margin: 0 auto 1.6rem;
   color: var(--ink-soft);
   font-size: 1.16rem;
   line-height: 1.75;
+  text-align: center;
 }
 
 .publication-authors {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.55rem;
   margin-bottom: 0.75rem;
   color: var(--ink);
@@ -238,6 +258,7 @@ a {
 .publication-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: 2rem;
 }
@@ -313,6 +334,11 @@ a {
   color: rgba(247, 244, 238, 0.88);
 }
 
+.hero-card-centered {
+  margin-top: 2.2rem;
+  text-align: center;
+}
+
 .hero-card::after {
   content: "";
   position: absolute;
@@ -349,11 +375,24 @@ a {
   list-style: none;
 }
 
+.hero-card-centered .hero-facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.35rem;
+}
+
 .hero-facts li {
   display: grid;
   gap: 0.25rem;
   padding-bottom: 0.9rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-card-centered .hero-facts li {
+  padding: 1rem 1rem 1.05rem;
+  border-bottom: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
 }
 
 .hero-facts li:last-child {
@@ -459,6 +498,16 @@ a {
   vertical-align: middle;
 }
 
+.flow-diagram-shell {
+  position: relative;
+  padding: 1.35rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid rgba(20, 32, 51, 0.08);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(247, 243, 234, 0.62));
+  box-shadow: var(--shadow-card);
+}
+
 .abstract-shell,
 .analysis-card,
 .showcase-card,
@@ -513,19 +562,33 @@ a {
 
 .flow-node {
   min-width: 220px;
-  padding: 1rem 1.15rem;
+  padding: 1.15rem 1.15rem 1.05rem;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.82);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
   text-align: center;
   box-shadow: var(--shadow-card);
+}
+
+.flow-node-label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  padding: 0.28rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(20, 32, 51, 0.06);
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .flow-node strong {
   display: block;
   color: var(--ink-strong);
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.18rem;
+  margin-bottom: 0.35rem;
 }
 
 .flow-node span {
@@ -545,9 +608,16 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.86);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(247, 243, 234, 0.78));
   color: var(--accent-deep);
   box-shadow: 0 10px 24px rgba(20, 32, 51, 0.08);
+}
+
+.flow-note {
+  margin: 1rem 0 0;
+  text-align: center;
+  color: var(--ink-soft);
+  line-height: 1.65;
 }
 
 .figure-card {
@@ -1009,6 +1079,10 @@ a:focus-visible {
     margin-top: 1.5rem;
   }
 
+  .hero-card-centered .hero-facts {
+    grid-template-columns: 1fr;
+  }
+
   .publication-subtitle {
     max-width: 100%;
   }
@@ -1050,6 +1124,10 @@ a:focus-visible {
   .hero-summary,
   .content.has-text-justified {
     font-size: 1rem;
+  }
+
+  .hero-center {
+    max-width: 100%;
   }
 
   .publication-links {
