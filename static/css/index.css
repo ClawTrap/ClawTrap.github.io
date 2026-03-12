@@ -65,6 +65,10 @@ a {
   color: inherit;
 }
 
+.container.is-max-widescreen {
+  max-width: min(1248px, calc(100% - 3rem)) !important;
+}
+
 .section {
   padding: 4.5rem 1.5rem;
 }
@@ -122,7 +126,8 @@ a {
 .publication-links,
 .highlight-grid,
 .taxonomy-grid,
-.footer-layout {
+.footer-layout,
+.flow-diagram {
   position: relative;
   z-index: 1;
 }
@@ -207,7 +212,7 @@ a {
 }
 
 .hero-summary {
-  max-width: 42rem;
+  max-width: 48rem;
   margin-bottom: 1.6rem;
   color: var(--ink-soft);
   font-size: 1.16rem;
@@ -235,6 +240,17 @@ a {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
+}
+
+.publication-affiliation {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 32, 51, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink-soft);
+  font-size: 0.98rem;
 }
 
 .cta-button.button {
@@ -416,7 +432,7 @@ a {
 }
 
 .section-heading {
-  max-width: 42rem;
+  max-width: 50rem;
   margin-bottom: 2rem;
 }
 
@@ -435,6 +451,12 @@ a {
   font-size: clamp(2.2rem, 4vw, 3.3rem);
   font-weight: 600 !important;
   line-height: 1;
+}
+
+.flow-inline {
+  color: var(--accent);
+  font-size: 0.7em;
+  vertical-align: middle;
 }
 
 .abstract-shell,
@@ -478,6 +500,54 @@ a {
   color: var(--accent-deep);
   font-weight: 700;
   letter-spacing: 0.05em;
+}
+
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.flow-node {
+  min-width: 220px;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.flow-node strong {
+  display: block;
+  color: var(--ink-strong);
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.flow-node span {
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.flow-node-accent {
+  background: linear-gradient(135deg, rgba(255, 250, 243, 0.96), rgba(247, 239, 226, 0.9));
+  border-color: rgba(140, 98, 57, 0.18);
+}
+
+.flow-arrow {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--accent-deep);
+  box-shadow: 0 10px 24px rgba(20, 32, 51, 0.08);
 }
 
 .figure-card {
@@ -990,6 +1060,18 @@ a:focus-visible {
   .publication-links .link-block,
   .publication-links .link-block a {
     width: 100%;
+  }
+
+  .flow-diagram {
+    gap: 0.7rem;
+  }
+
+  .flow-node {
+    min-width: 100%;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
   }
 
   .browser-body {
