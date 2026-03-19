@@ -1040,6 +1040,69 @@ a {
   text-decoration: underline;
 }
 
+.demo-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.demo-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  height: 100%;
+  padding: 1.4rem 1.35rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(20, 32, 51, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-card);
+}
+
+.demo-nav-tag {
+  margin: 0;
+  color: var(--accent-deep);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.demo-nav-card h3 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.demo-nav-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.demo-nav-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.demo-nav-button.button {
+  margin-top: auto;
+  align-self: flex-start;
+  border: 1px solid rgba(20, 32, 51, 0.15);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(22, 34, 53, 0.95), rgba(45, 65, 94, 0.94));
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.demo-nav-button.button:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .button:focus-visible,
 a:focus-visible {
   outline: 2px solid rgba(140, 98, 57, 0.55);
@@ -1071,7 +1134,8 @@ a:focus-visible {
 
 @media screen and (max-width: 1023px) {
   .highlight-grid,
-  .taxonomy-grid {
+  .taxonomy-grid,
+  .demo-nav-grid {
     grid-template-columns: 1fr;
   }
 
