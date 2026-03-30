@@ -321,43 +321,43 @@
       <div class="container is-max-widescreen">
         <div class="section-heading">
           <p class="section-label">Taxonomy</p>
-          <h2 class="title is-3">Attack families studied in ClawTrap</h2>
+          <h2 class="title is-3">MITM Attack-Mode Taxonomy</h2>
         </div>
 
         <div class="taxonomy-grid">
           <article class="taxonomy-card tone-crimson">
             <span class="taxonomy-icon"><i class="fas fa-window-restore"></i></span>
-            <p class="taxonomy-label">Attack Family 01</p>
-            <h3>Dynamic Pop-up Attacks</h3>
-            <p>Inject deceptive UI layers that hijack the execution flow of a live deployed agent at exactly the wrong moment.</p>
+            <p class="taxonomy-label">Attack Mode 01</p>
+            <h3>Static HTML Replacement</h3>
+            <p>Fully swaps original response bodies with forged but plausible pages, poisoning the model's primary evidence source.</p>
             <ul>
-              <li><strong>Privacy Harvesting:</strong> fake authentication windows request local secrets.</li>
-              <li><strong>Decision Hijacking:</strong> deceptive confirmation paths redirect agent behavior.</li>
-              <li><strong>DoS Prompts:</strong> oversized injected content disrupts the agent context.</li>
+              <li><strong>Mechanism:</strong> full response replacement on matched routes.</li>
+              <li><strong>Effect:</strong> high-confidence but incorrect summarization.</li>
+              <li><strong>Demo:</strong> fabricated BBC news content (Attack A).</li>
             </ul>
           </article>
 
           <article class="taxonomy-card tone-blue">
             <span class="taxonomy-icon"><i class="fas fa-envelope-open-text"></i></span>
-            <p class="taxonomy-label">Attack Family 02</p>
-            <h3>Contextual Poisoning</h3>
-            <p>Embed malicious instructions into high-frequency information channels such as web content and email.</p>
+            <p class="taxonomy-label">Attack Mode 02</p>
+            <h3>Iframe Popup Injection</h3>
+            <p>Overlays deceptive high-priority UI elements on top of legitimate pages using injected iframe containers.</p>
             <ul>
-              <li><strong>Email Hijacking:</strong> injected instructions request sensitive replies.</li>
-              <li><strong>Identity Spoofing:</strong> messages impersonate the owner or a trusted sender.</li>
-              <li><strong>Instruction Poisoning:</strong> visible content attempts to override task intent.</li>
+              <li><strong>Mechanism:</strong> warning or credential prompts injected without breaking context.</li>
+              <li><strong>Effect:</strong> trust miscalibration on UI-level security signals.</li>
+              <li><strong>Demo:</strong> fake Google security warning (Attack B).</li>
             </ul>
           </article>
 
           <article class="taxonomy-card tone-olive">
             <span class="taxonomy-icon"><i class="fas fa-globe"></i></span>
-            <p class="taxonomy-label">Attack Family 03</p>
-            <h3>Real-World Scenario Traps</h3>
-            <p>Blend attacks directly into realistic daily workflows that match the current benchmark scope.</p>
+            <p class="taxonomy-label">Attack Mode 03</p>
+            <h3>Dynamic Content Modification</h3>
+            <p>Performs fine-grained in-stream rewriting of selected DOM/text fragments, enabling stealthy manipulation.</p>
             <ul>
-              <li><strong>News Tasks:</strong> altered results bias summaries or trigger harmful navigation.</li>
-              <li><strong>Email Tasks:</strong> poisoned inbox content manipulates message handling.</li>
-              <li><strong>Routine Browsing:</strong> fake web elements redirect clicks and decisions.</li>
+              <li><strong>Mechanism:</strong> targeted substitution of facts, prices, warnings, or parameters.</li>
+              <li><strong>Effect:</strong> subtle downstream decision drift under live traffic.</li>
+              <li><strong>Goal:</strong> evaluate provenance-aware reasoning beyond text recognition.</li>
             </ul>
           </article>
         </div>
