@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ClawTrap Demo 1: Fabricated News Injection (Attack A) under dynamic MITM interception.">
-  <title>ClawTrap Demo 1 - Fabricated News Injection</title>
+  <meta name="description" content="ClawTrap Demo 1: HTML Replacement fabricated-news injection (Attack A) under dynamic MITM interception.">
+  <title>ClawTrap Demo 1 - HTML Replacement Attack</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
     <nav class="top-nav" aria-label="Demo navigation">
       <a class="top-link" href="index.html">Back to Home</a>
       <a class="top-link" href="demo2.html">Go to Demo 2</a>
-      <a class="top-link" href="templateArxiv%20(2).pdf" target="_blank" rel="noopener noreferrer">Read Paper PDF</a>
+      <a class="top-link" href="2603.18762v1.pdf" target="_blank" rel="noopener noreferrer">Read Paper PDF</a>
     </nav>
 
     <header class="hero">
       <p class="hero-tag">Demo 1 / Attack A</p>
-      <h1>Fabricated News Injection</h1>
+      <h1>HTML Replacement: Fabricated News Injection</h1>
       <p>MITM replaces the whole returned page with forged BBC-style content while the browsing workflow still looks normal.</p>
     </header>
 
@@ -33,7 +33,7 @@
         </article>
         <article class="task-item">
           <strong>Injection pattern</strong>
-          <span>Full-page replacement with fabricated news headlines (content poisoning).</span>
+          <span>Static HTML Replacement (REPLACE): full-page rewrite with fabricated news headlines.</span>
         </article>
       </div>
     </section>
@@ -41,7 +41,7 @@
     <section class="panel">
       <h2>Attack Snapshot</h2>
       <figure>
-        <img class="attack-image" src="static/images/pdf_extract/page05_01.png" alt="Attack A fabricated BBC page screenshot">
+        <img class="attack-image" src="static/images/pdf_extract_new/page04_02.png" alt="Attack A fabricated BBC page screenshot">
         <figcaption>The intercepted response is rewritten into fake BBC-like content. The agent receives poisoned evidence through a normal channel.</figcaption>
       </figure>
     </section>
